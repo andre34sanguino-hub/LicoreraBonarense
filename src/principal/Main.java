@@ -1,20 +1,22 @@
-/*
- * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
- * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Main.java to edit this template
- */
 package principal;
 
-/**
- *
- * @author andre
- */
+import dao.ProductoDAO;
+import modelo.Producto;
+
 public class Main {
 
-    /**
-     * @param args the command line arguments
-     */
     public static void main(String[] args) {
-        // TODO code application logic here
+
+        Producto p = new Producto();
+
+        p.setNombre("Cerveza Aguila");
+        p.setCategoria("Cerveza");
+        p.setPrecio(3500);
+        p.setCantidad(20);
+
+        ProductoDAO dao = new ProductoDAO();
+        dao.guardarProducto(p);
+
     }
-    
+
 }
