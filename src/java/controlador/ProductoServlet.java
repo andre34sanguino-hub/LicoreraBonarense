@@ -13,11 +13,15 @@ import jakarta.servlet.http.HttpServletRequest;
 import jakarta.servlet.http.HttpServletResponse;
 
 /**
+ * Servlet encargado de gestionar los productos
+ * del sistema Licorera Bonarense.
+ * Utiliza métodos GET y POST.
  *
- * @author andre
+ * @author Andrea Rojas
  */
 @WebServlet(name = "ProductoServlet", urlPatterns = {"/ProductoServlet"})
 public class ProductoServlet extends HttpServlet {
+    // Método GET para mostrar la página de productos
     @Override
 protected void doGet(HttpServletRequest request, HttpServletResponse response)
         throws ServletException, IOException {
@@ -37,10 +41,11 @@ protected void doGet(HttpServletRequest request, HttpServletResponse response)
     out.println("</body>");
     out.println("</html>");
 }
+// Método POST para procesar la información del formulario
 @Override
 protected void doPost(HttpServletRequest request, HttpServletResponse response)
         throws ServletException, IOException {
-
+    
     // Recibir los datos del formulario
     String nombre = request.getParameter("nombre");
     String categoria = request.getParameter("categoria");
