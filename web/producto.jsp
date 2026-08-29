@@ -33,7 +33,11 @@
         <input type="number" name="cantidad" required><br><br>
 
         <button type="submit">Guardar producto</button>
+    <br><br>
 
+<button type="submit" name="accion" value="consultar" formnovalidate>Consultar</button>
+<button type="submit" name="accion" value="modificar" formnovalidate>Modificar</button>
+<button type="submit" name="accion" value="eliminar" formnovalidate>Eliminar</button>
     </form>
 
 </body>
